@@ -37,7 +37,6 @@ class ResumeViewMobile extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(
-            horizontal: 24,
             vertical: 16,
           ),
           child: ResumeCard(
@@ -49,7 +48,6 @@ class ResumeViewMobile extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(
-            horizontal: 24,
             vertical: 16,
           ),
           child: ResumeCard(
@@ -61,7 +59,6 @@ class ResumeViewMobile extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(
-            horizontal: 24,
             vertical: 16,
           ),
           child: ResumeCard(
@@ -73,7 +70,6 @@ class ResumeViewMobile extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(
-            horizontal: 24,
             vertical: 16,
           ),
           child: ResumeCard(
