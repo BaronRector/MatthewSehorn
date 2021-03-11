@@ -72,10 +72,10 @@ class ContactViewFull extends StatelessWidget {
               vertical: 30,
             ),
             constraints: BoxConstraints(
-              maxWidth: 480,
+              maxHeight: 480,
             ),
             child: Image(
-              image: AssetImage('assets/images/undraw_profile_6l1l.png'),
+              image: AssetImage('assets/images/contact_page_header.png'),
               fit: BoxFit.cover,
             ),
           ),
