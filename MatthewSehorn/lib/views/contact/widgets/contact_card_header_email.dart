@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttericon/typicons_icons.dart';
 import 'package:matthew_sehorn/constants/strings.dart';
-
 import 'package:url_launcher/url_launcher.dart';
 
 const _url = 'mailto:${Strings.emailAddress}';
