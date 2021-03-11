@@ -3,8 +3,8 @@ import 'package:fluttericon/typicons_icons.dart';
 import 'package:matthew_sehorn/constants/strings.dart';
 import 'package:vrouter/vrouter.dart';
 
-class ContactCardHeaderLocation extends StatelessWidget {
-  const ContactCardHeaderLocation({Key key}) : super(key: key);
+class ContactCardHeaderLinkedIn extends StatelessWidget {
+  const ContactCardHeaderLinkedIn({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ContactCardHeaderLocation extends StatelessWidget {
       child: Column(
         children: [
           Icon(
-            Typicons.location,
+            Typicons.linkedin,
             size: 34,
             color: Theme.of(context).primaryColor,
           ),
@@ -20,7 +20,7 @@ class ContactCardHeaderLocation extends StatelessWidget {
             height: 8,
           ),
           Text(
-            Strings.locationTitle,
+            Strings.linkedIn,
             style: Theme.of(context).textTheme.headline3,
           ),
           SizedBox(
@@ -28,12 +28,12 @@ class ContactCardHeaderLocation extends StatelessWidget {
           ),
           TextButton(
             child: Text(
-              Strings.locationAddress,
+              Strings.homeFullName,
               style: Theme.of(context).textTheme.bodyText1.copyWith(color: Theme.of(context).primaryColor),
             ),
             onPressed: () => {
               VRouterData.of(context).pushExternal(
-                'https://www.google.com/maps/place/Akron,+OH/@41.0844752,-81.5830176,12z/data=!3m1!4b1!4m5!3m4!1s0x8830d7958b2efab7:0x29c96c95fd266d04!8m2!3d41.0814447!4d-81.5190053',
+                'https://www.linkedin.com/in/matthewsehorn/',
                 openNewTab: true,
               ),
             },

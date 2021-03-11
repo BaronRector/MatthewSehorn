@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:matthew_sehorn/constants/strings.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_email.dart';
+import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_linkedin.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_location.dart';
-import 'package:matthew_sehorn/views/contact/widgets/contact_form_full.dart';
-import 'package:matthew_sehorn/views/contact/widgets/contact_send_button.dart';
 
 class ContactViewFull extends StatelessWidget {
   const ContactViewFull({
@@ -69,8 +68,22 @@ class ContactViewFull extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(
-              30,
+            margin: EdgeInsets.symmetric(
+              vertical: 30,
+            ),
+            constraints: BoxConstraints(
+              maxWidth: 480,
+            ),
+            child: Image(
+              image: AssetImage('assets/images/undraw_profile_6l1l.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(
+              left: 30,
+              right: 30,
+              bottom: 30,
             ),
             child: Card(
               elevation: 16,
@@ -83,7 +96,7 @@ class ContactViewFull extends StatelessWidget {
                 children: [
                   Container(
                     margin: EdgeInsets.symmetric(
-                      vertical: 24,
+                      vertical: 112,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -93,22 +106,11 @@ class ContactViewFull extends StatelessWidget {
                         SizedBox(
                           width: 24,
                         ),
+                        ContactCardHeaderLinkedIn(),
+                        SizedBox(
+                          width: 24,
+                        ),
                         ContactCardHeaderLocation(),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 24,
-                  ),
-                  ContactFormFull(),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 24, right: 24),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        ContactSendButton(),
                       ],
                     ),
                   ),

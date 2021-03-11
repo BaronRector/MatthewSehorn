@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:matthew_sehorn/constants/strings.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_email.dart';
+import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_linkedin.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_location.dart';
-import 'package:matthew_sehorn/views/contact/widgets/contact_form_mobile.dart';
 
 class ContactViewMobile extends StatelessWidget {
   const ContactViewMobile({
@@ -33,7 +33,12 @@ class ContactViewMobile extends StatelessWidget {
         SizedBox(
           height: 56,
         ),
+        Image(
+          image: AssetImage('assets/images/undraw_profile_6l1l.png'),
+          fit: BoxFit.cover,
+        ),
         Container(
+          width: double.infinity,
           margin: EdgeInsets.symmetric(
             vertical: 12,
           ),
@@ -49,6 +54,7 @@ class ContactViewMobile extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(
                     top: 24,
+                    bottom: 24,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -59,14 +65,14 @@ class ContactViewMobile extends StatelessWidget {
                       SizedBox(
                         height: 24,
                       ),
+                      ContactCardHeaderLinkedIn(),
+                      SizedBox(
+                        height: 24,
+                      ),
                       ContactCardHeaderLocation(),
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 12,
-                ),
-                ContactFormMobile(),
               ],
             ),
           ),
