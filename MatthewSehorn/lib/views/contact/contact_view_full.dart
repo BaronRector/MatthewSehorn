@@ -67,56 +67,57 @@ class ContactViewFull extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.symmetric(
-              vertical: 30,
-            ),
-            constraints: BoxConstraints(
-              maxHeight: 480,
-            ),
-            child: Image(
-              image: AssetImage('assets/images/contact_page_header.png'),
-              fit: BoxFit.cover,
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(
-              left: 30,
-              right: 30,
-              bottom: 30,
-            ),
-            child: Card(
-              elevation: 16,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(
-                  12,
-                ),
-              ),
-              child: Column(
-                children: [
-                  Container(
-                    margin: EdgeInsets.symmetric(
-                      vertical: 112,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Flexible(
+                flex: 1,
+                child: Container(
+                  margin: EdgeInsets.all(
+                    30,
+                  ),
+                  child: Card(
+                    elevation: 16,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        12,
+                      ),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        ContactCardHeaderEmail(),
-                        SizedBox(
-                          width: 24,
-                        ),
-                        ContactCardHeaderLinkedIn(),
-                        SizedBox(
-                          width: 24,
-                        ),
-                        ContactCardHeaderLocation(),
-                      ],
+                    child: Container(
+                      margin: EdgeInsets.symmetric(
+                        vertical: 80,
+                        horizontal: 112,
+                      ),
+                      child: Column(
+                        children: [
+                          ContactCardHeaderEmail(),
+                          SizedBox(
+                            height: 36,
+                          ),
+                          ContactCardHeaderLinkedIn(),
+                          SizedBox(
+                            height: 36,
+                          ),
+                          ContactCardHeaderLocation(),
+                        ],
+                      ),
                     ),
                   ),
-                ],
+                ),
               ),
-            ),
+              Container(
+                margin: EdgeInsets.symmetric(
+                  vertical: 30,
+                ),
+                constraints: BoxConstraints(
+                  maxHeight: 560,
+                ),
+                child: Image(
+                  image: AssetImage('assets/images/contact_page_header.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ],
           ),
         ],
       ),
