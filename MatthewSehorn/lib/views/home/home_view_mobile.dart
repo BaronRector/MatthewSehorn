@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:matthew_sehorn/constants/strings.dart';
 import 'package:matthew_sehorn/views/home/widgets/home_accent_image.dart';
 
@@ -12,16 +13,11 @@ class HomeViewMobile extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(
-            top: 16,
-            left: 8,
-            right: 8,
-          ),
           child: HomeAccentImage(),
         ),
         Container(
           margin: EdgeInsets.symmetric(
-            vertical: 4,
+            vertical: 20,
             horizontal: 36,
           ),
           child: Column(
@@ -45,10 +41,6 @@ class HomeViewMobile extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
               ),
-              // SizedBox(
-              //   height: 36,
-              // ),
-              // DownloadCVButton(),
             ],
           ),
         )
