@@ -19,7 +19,7 @@ class SiteButton extends StatelessWidget {
         style: ButtonStyle(
           foregroundColor: MaterialStateProperty.resolveWith(
             (states) {
-              if (states.contains(MaterialState.hovered) || this.highlight) {
+              if (states.contains(MaterialState.hovered) || this.highlight || states.contains(MaterialState.pressed)) {
                 return Theme.of(context).primaryTextTheme.button.color;
               }
               return Theme.of(context).textTheme.button.color;
@@ -27,7 +27,7 @@ class SiteButton extends StatelessWidget {
           ),
           textStyle: MaterialStateProperty.resolveWith(
             (states) {
-              if (states.contains(MaterialState.hovered) || this.highlight) {
+              if (states.contains(MaterialState.hovered) || this.highlight || states.contains(MaterialState.pressed)) {
                 return Theme.of(context).primaryTextTheme.button;
               }
               return Theme.of(context).textTheme.button;
@@ -46,15 +46,17 @@ class SiteButton extends StatelessWidget {
           ),
           elevation: MaterialStateProperty.resolveWith(
             (states) {
-              if (states.contains(MaterialState.hovered)) {
+              if (states.contains(MaterialState.hovered) && !states.contains(MaterialState.pressed)) {
                 return 8;
+              } else if (states.contains(MaterialState.pressed)) {
+                return 0;
               }
               return 8;
             },
           ),
           backgroundColor: MaterialStateProperty.resolveWith(
             (states) {
-              if (states.contains(MaterialState.hovered) || highlight) {
+              if (states.contains(MaterialState.hovered) || highlight || states.contains(MaterialState.pressed)) {
                 return Theme.of(context).primaryColor;
               }
               return Theme.of(context).canvasColor;

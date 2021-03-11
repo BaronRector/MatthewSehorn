@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:matthew_sehorn/common_widgets/site_button.dart';
-import 'package:matthew_sehorn/constants/strings.dart';
+import 'package:matthew_sehorn/services/contact_form_service.dart';
+import 'package:matthew_sehorn/views/contact/widgets/contact_form_contact_info.dart';
+import 'package:matthew_sehorn/views/contact/widgets/contact_form_message.dart';
+import 'package:matthew_sehorn/views/contact/widgets/contact_send_button.dart';
 
 class ContactFormMobile extends StatelessWidget {
   const ContactFormMobile({
@@ -11,6 +13,7 @@ class ContactFormMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Form(
+        key: contactFormKey,
         child: Column(
           children: [
             Flex(
@@ -20,62 +23,13 @@ class ContactFormMobile extends StatelessWidget {
                   margin: EdgeInsets.all(
                     24,
                   ),
-                  child: Column(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(
-                          bottom: 24,
-                        ),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                width: 2,
-                              ),
-                            ),
-                            hintText: Strings.yourName,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(
-                          bottom: 24,
-                        ),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: Strings.emailAddressHint,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: Strings.subjectHint,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: ContactFormContactInfo(),
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(
                     horizontal: 24,
                   ),
-                  child: Container(
-                    height: 210,
-                    child: TextFormField(
-                      textAlignVertical: TextAlignVertical.top,
-                      expands: true,
-                      minLines: null,
-                      maxLines: null,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: Strings.messageHint,
-                      ),
-                    ),
-                  ),
+                  child: ContactFormMessage(),
                 ),
               ],
             ),
@@ -86,11 +40,7 @@ class ContactFormMobile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  SiteButton(
-                    highlight: false,
-                    pressedFunc: () => {},
-                    label: 'Send Message',
-                  )
+                  ContactSendButton(),
                 ],
               ),
             ),

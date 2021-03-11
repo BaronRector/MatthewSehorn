@@ -35,6 +35,7 @@ class Strings {
   static const String emailAddress = 'MSehorn@Outlook.com';
   static const String locationTitle = 'Location';
   static const String locationAddress = 'Akron, Ohio USA';
+  static const String linkedInTitle = 'LinkedIn';
   static const String yourName = 'Your Name';
   static const String emailAddressHint = 'Email Address';
   static const String messageHint = 'Message';

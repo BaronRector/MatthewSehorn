@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:matthew_sehorn/common_widgets/site_button.dart';
 import 'package:matthew_sehorn/constants/strings.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_email.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_location.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_form_full.dart';
+import 'package:matthew_sehorn/views/contact/widgets/contact_send_button.dart';
 
 class ContactViewFull extends StatelessWidget {
   const ContactViewFull({
@@ -108,11 +108,7 @@ class ContactViewFull extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        SiteButton(
-                          highlight: false,
-                          pressedFunc: () => {},
-                          label: 'Send Message',
-                        )
+                        ContactSendButton(),
                       ],
                     ),
                   ),
