@@ -13,6 +13,7 @@ class AppTheme {
     cardColor: LightThemeConsts.canvas,
     scaffoldBackgroundColor: LightThemeConsts.background,
     primaryColor: LightThemeConsts.primary,
+    accentColor: LightThemeConsts.primary,
     primaryIconTheme: IconThemeData(
       color: DarkThemeConsts.fontColor1,
     ),
@@ -125,6 +126,7 @@ class AppTheme {
     cardColor: DarkThemeConsts.canvas,
     scaffoldBackgroundColor: DarkThemeConsts.background,
     primaryColor: DarkThemeConsts.primary,
+    accentColor: DarkThemeConsts.primary,
     primaryIconTheme: IconThemeData(
       color: DarkThemeConsts.fontColor1,
     ),

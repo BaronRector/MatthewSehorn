@@ -14,15 +14,15 @@ class HomeViewMobile extends StatelessWidget {
         Container(
           margin: EdgeInsets.only(
             top: 16,
-            left: 24,
-            right: 24,
+            left: 8,
+            right: 8,
           ),
           child: HomeAccentImage(),
         ),
         Container(
           margin: EdgeInsets.symmetric(
             vertical: 4,
-            horizontal: 48,
+            horizontal: 36,
           ),
           child: Column(
             children: [

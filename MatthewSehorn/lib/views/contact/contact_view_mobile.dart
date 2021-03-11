@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:matthew_sehorn/constants/strings.dart';
+import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_email.dart';
+import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_location.dart';
+import 'package:matthew_sehorn/views/contact/widgets/contact_form_mobile.dart';
 
 class ContactViewMobile extends StatelessWidget {
   const ContactViewMobile({
@@ -31,11 +34,40 @@ class ContactViewMobile extends StatelessWidget {
           height: 56,
         ),
         Container(
-          height: MediaQuery.of(context).size.height - 240,
-          child: Center(
-            child: Text(
-              Strings.comingSoon,
-              style: Theme.of(context).textTheme.headline2,
+          margin: EdgeInsets.symmetric(
+            vertical: 12,
+          ),
+          child: Card(
+            elevation: 16,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+                12,
+              ),
+            ),
+            child: Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(
+                    top: 24,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      ContactCardHeaderEmail(),
+                      SizedBox(
+                        height: 24,
+                      ),
+                      ContactCardHeaderLocation(),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                ContactFormMobile(),
+              ],
             ),
           ),
         ),

@@ -50,7 +50,12 @@ class _ViewContainerMobileState extends State<ViewContainerMobile> {
                     },
                     child: SingleChildScrollView(
                       physics: AlwaysScrollableScrollPhysics(),
-                      child: widget.child,
+                      child: Container(
+                        margin: EdgeInsets.all(
+                          16,
+                        ),
+                        child: widget.child,
+                      ),
                     ),
                   ),
                 ),

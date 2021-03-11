@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:matthew_sehorn/common_widgets/site_button.dart';
 import 'package:matthew_sehorn/services/responsive_service.dart';
 import 'package:matthew_sehorn/services/selected_view_service.dart';
 
@@ -21,62 +22,10 @@ class AppMenuButton extends StatelessWidget {
         final selected = watch(selectedViewProvider).value == label;
 
         return isDesktop
-            ? ElevatedButton(
-                style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.resolveWith(
-                    (states) {
-                      if (states.contains(MaterialState.hovered) || selected) {
-                        return Theme.of(context).primaryTextTheme.button.color;
-                      }
-                      return Theme.of(context).textTheme.button.color;
-                    },
-                  ),
-                  textStyle: MaterialStateProperty.resolveWith(
-                    (states) {
-                      if (states.contains(MaterialState.hovered) || selected) {
-                        return Theme.of(context).primaryTextTheme.button;
-                      }
-                      return Theme.of(context).textTheme.button;
-                    },
-                  ),
-                  shape: MaterialStateProperty.resolveWith(
-                    (states) {
-                      return RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Theme.of(context).primaryColor,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(36),
-                      );
-                    },
-                  ),
-                  elevation: MaterialStateProperty.resolveWith(
-                    (states) {
-                      if (states.contains(MaterialState.hovered)) {
-                        return 8;
-                      }
-                      return 8;
-                    },
-                  ),
-                  backgroundColor: MaterialStateProperty.resolveWith(
-                    (states) {
-                      if (states.contains(MaterialState.hovered) || selected) {
-                        return Theme.of(context).primaryColor;
-                      }
-                      return Theme.of(context).canvasColor;
-                    },
-                  ),
-                ),
-                onPressed: pressedFunc,
-                child: Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 6,
-                    vertical: 6,
-                  ),
-                  child: Text(
-                    label,
-                  ),
-                ),
+            ? SiteButton(
+                pressedFunc: pressedFunc,
+                label: label,
+                highlight: selected,
               )
             : Container(
                 decoration: BoxDecoration(
