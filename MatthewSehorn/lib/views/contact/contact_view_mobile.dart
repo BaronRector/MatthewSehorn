@@ -33,9 +33,15 @@ class ContactViewMobile extends StatelessWidget {
         SizedBox(
           height: 56,
         ),
-        Image(
-          image: AssetImage('assets/images/undraw_profile_6l1l.png'),
-          fit: BoxFit.cover,
+        Container(
+          margin: EdgeInsets.symmetric(
+            horizontal: 48,
+            vertical: 30,
+          ),
+          child: Image(
+            image: AssetImage('assets/images/undraw_profile_6l1l.png'),
+            fit: BoxFit.cover,
+          ),
         ),
         Container(
           width: double.infinity,
