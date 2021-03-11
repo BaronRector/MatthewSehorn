@@ -30,16 +30,12 @@ class ContactViewMobile extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          height: 56,
-        ),
         Container(
           constraints: BoxConstraints(
             maxHeight: 360,
           ),
-          margin: EdgeInsets.symmetric(
-            horizontal: 48,
-            vertical: 30,
+          margin: EdgeInsets.only(
+            top: 30,
           ),
           child: Image(
             image: AssetImage('assets/images/contact_page_header.png'),
@@ -49,7 +45,7 @@ class ContactViewMobile extends StatelessWidget {
         Container(
           width: double.infinity,
           margin: EdgeInsets.symmetric(
-            vertical: 12,
+            vertical: 0,
           ),
           child: Card(
             elevation: 16,
