@@ -57,26 +57,28 @@ class ContactViewMobile extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Container(
-                    margin: EdgeInsets.only(
-                      top: 24,
-                      bottom: 24,
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        ContactCardHeaderEmail(),
-                        SizedBox(
-                          height: 24,
-                        ),
-                        ContactCardHeaderLinkedIn(),
-                        SizedBox(
-                          height: 24,
-                        ),
-                        ContactCardHeaderLocation(),
-                      ],
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        top: 24,
+                        bottom: 24,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          ContactCardHeaderEmail(),
+                          SizedBox(
+                            height: 24,
+                          ),
+                          ContactCardHeaderLinkedIn(),
+                          SizedBox(
+                            height: 24,
+                          ),
+                          ContactCardHeaderLocation(),
+                        ],
+                      ),
                     ),
                   ),
                 ],
