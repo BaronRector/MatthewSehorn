@@ -37,7 +37,7 @@ class ResumeViewMobile extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(
-            vertical: 16,
+            vertical: 12,
           ),
           child: ResumeCard(
             yearRangeText: '2015 - Current',
@@ -48,7 +48,7 @@ class ResumeViewMobile extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(
-            vertical: 16,
+            vertical: 12,
           ),
           child: ResumeCard(
             yearRangeText: '2014 - 2015',
@@ -59,18 +59,18 @@ class ResumeViewMobile extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.symmetric(
-            vertical: 16,
+            vertical: 12,
           ),
           child: ResumeCard(
-            yearRangeText: '2007 - 2010',
-            nameText: 'National Enterprise Systems (NES)',
-            titleText: 'File Transmissions, Programmer',
+            yearRangeText: '2010 - 2014',
+            nameText: 'DermaMed Coatings Company LLC',
+            titleText: 'Systems Administrator, Programmer',
             summaryText: 'Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in posuere lacus arcu quis felis. Etiam interdum erat non enim venenatis fermentum.',
           ),
         ),
         Container(
-          margin: EdgeInsets.symmetric(
-            vertical: 16,
+          margin: EdgeInsets.only(
+            top: 12,
           ),
           child: ResumeCard(
             yearRangeText: '2007 - 2010',

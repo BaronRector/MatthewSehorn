@@ -31,8 +31,11 @@ class ViewContainer extends StatelessWidget {
                 child: childFull,
               );
             } else {
-              return ViewContainerMobile(
-                child: childMobile,
+              return Container(
+                color: Theme.of(context).scaffoldBackgroundColor,
+                child: ViewContainerMobile(
+                  child: childMobile,
+                ),
               );
             }
           },

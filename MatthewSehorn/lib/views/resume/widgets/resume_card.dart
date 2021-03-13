@@ -23,6 +23,9 @@ class ResumeCard extends StatelessWidget {
           Card(
             margin: EdgeInsets.only(
               top: 16,
+              bottom: 0,
+              left: 0,
+              right: 0,
             ),
             elevation: 16,
             shape: RoundedRectangleBorder(

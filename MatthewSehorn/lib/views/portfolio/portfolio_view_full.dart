@@ -32,6 +32,19 @@ class PortfolioViewFull extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                  padding: EdgeInsets.only(
+                    top: 20,
+                    bottom: 0,
+                  ),
+                  child: SelectableText(
+                    Strings.portfolioSubTitle,
+                    style: Theme.of(context).primaryTextTheme.headline6.copyWith(color: Theme.of(context).textTheme.headline6.color.withOpacity(.75)),
+                  ),
+                ),
+              ),
+              Align(
                 alignment: Alignment.centerLeft,
                 child: Container(
                   padding: EdgeInsets.only(

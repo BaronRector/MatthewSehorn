@@ -19,7 +19,6 @@ class PreviousPageNotifier extends ChangeNotifier {
 
   void setPreviousPage(Widget page) {
     _previousPage = page;
-    print(_previousPage);
     notifyListeners();
   }
 }

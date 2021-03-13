@@ -40,4 +40,7 @@ class Strings {
   static const String emailAddressHint = 'Email Address';
   static const String messageHint = 'Message';
   static const String subjectHint = 'Subject';
+
+  //Portfolio string
+  static const String portfolioSubTitle = 'My work';
 }

@@ -27,15 +27,13 @@ class PortfolioViewMobile extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          height: 56,
-        ),
-        Container(
-          height: MediaQuery.of(context).size.height - 240,
-          child: Center(
-            child: Text(
-              Strings.comingSoon,
-              style: Theme.of(context).textTheme.headline2,
+        Expanded(
+          child: Container(
+            child: Center(
+              child: Text(
+                Strings.comingSoon,
+                style: Theme.of(context).textTheme.headline2,
+              ),
             ),
           ),
         ),
