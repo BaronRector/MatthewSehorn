@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:matthew_sehorn/common_widgets/image_placeholder.dart';
 import 'package:matthew_sehorn/constants/strings.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_email.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_linkedin.dart';
 import 'package:matthew_sehorn/views/contact/widgets/contact_card_header_location.dart';
 
 class ContactViewFull extends StatelessWidget {
-  const ContactViewFull({
-    Key key,
-  }) : super(key: key);
+  const ContactViewFull({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +73,7 @@ class ContactViewFull extends StatelessWidget {
                 flex: 1,
                 child: Container(
                   margin: EdgeInsets.all(
-                    30,
+                    24,
                   ),
                   child: Card(
                     elevation: 16,
@@ -85,7 +84,7 @@ class ContactViewFull extends StatelessWidget {
                     ),
                     child: Container(
                       margin: EdgeInsets.symmetric(
-                        vertical: 80,
+                        vertical: 40,
                         horizontal: 112,
                       ),
                       child: Column(
@@ -107,14 +106,17 @@ class ContactViewFull extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.symmetric(
-                  vertical: 30,
+                  vertical: 0,
                 ),
                 constraints: BoxConstraints(
                   maxHeight: 560,
                 ),
-                child: Image(
+                child: ImageWidgetPlaceholder(
                   image: AssetImage('assets/images/contact_page_header.png'),
-                  fit: BoxFit.cover,
+                  placeholder: SizedBox(
+                    width: 560,
+                    height: 560,
+                  ),
                 ),
               ),
             ],

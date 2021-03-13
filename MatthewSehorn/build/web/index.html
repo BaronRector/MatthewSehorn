@@ -52,6 +52,16 @@
             });
         }
     </script>
+    <script>
+        var theme = localStorage.getItem('appThemeMode');
+        var background = '#1F1F2D';
+
+        if(theme == 'light'){
+            background = '#EEEEF2'
+        }
+
+        document.getElementById('loading-page').style.background = background;
+    </script>
     <script src="main.dart.js" type="application/javascript"></script>
 </body>
 

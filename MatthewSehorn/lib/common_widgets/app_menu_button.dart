@@ -19,7 +19,7 @@ class AppMenuButton extends StatelessWidget {
     return Consumer(
       builder: (context, watch, _) {
         final isDesktop = watch(isDesktopProvider).value;
-        final selected = watch(selectedViewProvider).value == label;
+        final selected = watch(selectedViewProvider.state) == label;
 
         return isDesktop
             ? SiteButton(

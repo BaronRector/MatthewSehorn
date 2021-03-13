@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:matthew_sehorn/common_widgets/site_footer_mobile.dart';
-import 'package:matthew_sehorn/services/responsive_service.dart';
+import 'dart:html' as html;
 
 class ViewContainerMobile extends StatefulWidget {
   final Widget child;
@@ -41,21 +40,28 @@ class _ViewContainerMobileState extends State<ViewContainerMobile> {
             ),
           ),
           Container(
+            height: MediaQuery.of(context).size.height,
             child: Column(
               children: [
                 Expanded(
                   child: RefreshIndicator(
                     onRefresh: () async => {
-                      context.refresh(isDesktopProvider),
+                      html.window.location.reload(),
                     },
-                    child: SingleChildScrollView(
-                      physics: AlwaysScrollableScrollPhysics(),
-                      child: Container(
-                        margin: EdgeInsets.all(
-                          16,
+                    child: CustomScrollView(
+                      slivers: [
+                        SliverFillRemaining(
+                          hasScrollBody: false,
+                          child: Container(
+                            height: double.infinity,
+                            margin: EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 16,
+                            ),
+                            child: widget.child,
+                          ),
                         ),
-                        child: widget.child,
-                      ),
+                      ],
                     ),
                   ),
                 ),
