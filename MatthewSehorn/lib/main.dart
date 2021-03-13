@@ -77,10 +77,10 @@ class MyApp extends ConsumerWidget {
         themeMode: appThemeState.isDarkModeEnabled ? ThemeMode.dark : ThemeMode.light,
         debugShowCheckedModeBanner: false,
         reverseTransitionDuration: Duration(
-          milliseconds: isDesktop ? 400 : 325,
+          milliseconds: isDesktop ? 450 : 400,
         ),
         transitionDuration: Duration(
-          milliseconds: isDesktop ? 400 : 325,
+          milliseconds: isDesktop ? 450 : 400,
         ),
         buildTransition: (animation1, animation2, child) {
           return isDesktop ? scaleTransition(animation1, child) : slideTransition(animation1, child);
