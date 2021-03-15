@@ -83,7 +83,7 @@ class MyApp extends ConsumerWidget {
           milliseconds: isDesktop ? 450 : 400,
         ),
         buildTransition: (animation1, animation2, child) {
-          return isDesktop ? scaleTransition(animation1, child) : slideTransition(animation1, child);
+          return slideTransition(animation1, child);
         },
         routes: [
           VStacked(
